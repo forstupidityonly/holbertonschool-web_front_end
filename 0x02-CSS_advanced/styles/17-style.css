@@ -93,11 +93,12 @@ a:active {
 }
 
 .section-body {
-  padding: val(section-body-padding);
+  padding: val(--section-body-padding);
 }
 
 .section-footer {
-  padding: val(section-footer-padding);
+  padding: val(--section-footer-padding);
+  text-align: var(--section-footer-align);
 }
 
 .section-title {
