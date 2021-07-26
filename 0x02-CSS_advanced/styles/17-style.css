@@ -123,5 +123,5 @@ a:active {
 }
 
 .footer {
-  padding: val(footer-padding);
+  padding: var(footer-padding);
 }
