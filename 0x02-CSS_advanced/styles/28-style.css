@@ -297,7 +297,7 @@ ul.row {
 }
 
 .header-logo {
-  position: var(--header-logo-postition);
+  position: var(--header-logo-position);
 }
 
 .header-logo a {
