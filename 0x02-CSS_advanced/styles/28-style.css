@@ -297,12 +297,12 @@ ul.row {
 }
 
 .header-logo {
-  postion: var(--header-logo-postition);
+  position: var(--header-logo-postition);
 }
 
 .header-logo a {
   display: var(--header-logo-link-display);
   position: var(--header-logo-link-position);
-  top: var(--header-logo-position-top);
+  top: var(--header-logo-link-top);
   left: var(--header-logo-link-left);
 }
