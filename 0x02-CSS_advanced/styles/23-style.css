@@ -213,6 +213,6 @@ ul.row {
   display: block;
 }
 
-.socal-link > svg {
+.social-link > svg {
   fill: var(--text-color);
 }
