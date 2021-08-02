@@ -2,7 +2,7 @@
 $colorone: #FF0000;
 $colortwo: #FF0000;
 button {
-  color: $colorone
-  button:hover {
+  color: $colorone;
+  @:hover {
     color: $colortwo; }
   }
