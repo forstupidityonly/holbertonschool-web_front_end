@@ -6,9 +6,7 @@ $div: 15px;
   margin-right: $margin;
 }
 body {
-  margin-left: $bdy;
-  margin-right: $bdy; }
+  @include margin($bdy) }
 
 div {
-  margin-left: $div;
-  margin-right: $div; }
+  @include margin($div) }
