@@ -1,0 +1,9 @@
+/*num 4*/
+$main: #3D3D3D;
+$second: #FF0000;
+body {
+  color: $main;
+
+  .red {
+    color: $second; }
+    }
