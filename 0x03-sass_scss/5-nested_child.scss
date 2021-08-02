@@ -1,0 +1,8 @@
+/*num 5*/
+$colorone: #3D3D3D; 
+$colortwo: #FF0000;
+body {
+  color: $colorone;
+   > .red {
+    color: $colortwo; }
+}
