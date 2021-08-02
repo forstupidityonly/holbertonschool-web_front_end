@@ -1,0 +1,14 @@
+/*num 8*/
+$bdy: 10px;
+$div: 15px;
+@mixin margin($margin) {
+  margin-left: $margin;
+  margin-right: $margin;
+}
+body {
+  margin-left: $bdy;
+  margin-right: $bdy; }
+
+div {
+  margin-left: $div;
+  margin-right: $div; }
