@@ -1,8 +1,8 @@
 /*num 6*/
-$colorone #FF0000;
-$colortwo #FF0000;
+$colorone: #FF0000;
+$colortwo: #FF0000;
 button {
-  color: #FF0000;
+  color: $colorone
   button:hover {
-    color: #00FF00; }
+    color: $colortwo; }
   }
