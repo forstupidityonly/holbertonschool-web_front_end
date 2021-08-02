@@ -1,0 +1,6 @@
+/*num 12*/
+@for $i from 1 through 5 {
+  h#{$1} {
+    font-size: #{$i}px;
+  }
+}
