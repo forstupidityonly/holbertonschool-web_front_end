@@ -653,8 +653,8 @@ ul.row {
 
 .post-comments {
   width: 80%;
-  margin: 10 0 0 auto;
-  padding left: 7rem;
+  margin: 10rem 0 0 auto;
+  padding-left: 7rem;
 }
 
 .post-comments .section-title {
