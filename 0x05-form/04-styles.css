@@ -688,7 +688,7 @@ label {
 
 }
 
-imput[type="text"], imput[type="email"], textarea {
+input[type="text"], input[type="email"], textarea {
   position: relative;
   width: 100%;
   padding: 1.2rem;
@@ -699,11 +699,11 @@ imput[type="text"], imput[type="email"], textarea {
   outline: 0;
 }
 
-imput[type="text"], imput[type="email"] {
+input[type="text"], input[type="email"] {
   padding-right: 3rem;
 }
 
-imput[type="text"]:focus, imput[type="email"]:focus, textarea:focus {
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
   border: .1rem solid var(--color-grey);
   background color: var(--color-light-grey);
 }
