@@ -19,6 +19,7 @@
                     queryWikipedia($('input').val());
                 });
                 $("body").append("<ul></ul>");
+                $("body").append("<ul id='pagination'></ul>");
             }
 
             const addNewArticle = (id, title, snippet) => {
@@ -26,13 +27,14 @@
                 $("ul").append(lI);
             }
 
-            const queryWikipedia = search => {
+            const queryWikipedia = (search, offset = 0) => {
                 let url = "https://en.wikipedia.org/w/api.php";
                 const params = {
                     action: "query",
                     list: "search",
                     srsearch: search,
-                    format: "json"
+                    format: "json",
+                    sroffset: offset
                 };
                 url = url + "?origin=*";
                 Object.keys(params).forEach(key => {
