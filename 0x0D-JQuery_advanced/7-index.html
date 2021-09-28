@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 7</title>
+    </head>
+    <body>
+        <script
+            type="application/javascript"
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+        <script>
+            const createSearchForm = () => {
+                $("body").append("<form><input type='text'></form>");
+                $("form").append("<input type='submit'>");
+                $("form").submit(event => {
+                    event.preventDefault();
+                    queryWikipedia($('input').val());
+                });
+                $("body").append("<ul></ul>");
+            }
+
+            const addNewArticle = (id, title, snippet) => {
+                const lI = $("<li></li>").append(`<p><span>${id} - <b>${title}</b></span></p>`, `<p>${snippet}</p>`);
+                $("ul").append(lI);
+            }
+
+            const queryWikipedia = search => {
+                let url = "https://en.wikipedia.org/w/api.php";
+                const params = {
+                    action: "query",
+                    list: "search",
+                    srsearch: search,
+                    format: "json"
+                };
+                url = url + "?origin=*";
+                Object.keys(params).forEach(key => {
+                    url += "&" + key + "=" + params[key];
+                });
+                $.get(url, response => response.query.search.forEach(data => {
+                    const {pageid, title, snippet} = data;
+                    addNewArticle(pageid, title, snippet);
+                }));
+            }
+            createSearchForm()
+        </script>
+    </body>
+</html>
