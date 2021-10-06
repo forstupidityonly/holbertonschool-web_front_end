@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</head>
+
+<body>
+    <div id="loginForm">
+        <h2>Login to the website</h2>
+        <input type="text" id="firstname">
+        <input type="text" id="email">
+        <button onclick="setCookies()">Log me in</button>
+    </div>
+
+    <h1>Cookies</h1>
+    <button onclick="showCookies()">Show the cookies</button>
+    <div class="cookies"></div>
+    <script>
+        function setCookies() {
+            Cookies.set('firstname', `${document.getElementById("firstname").value}`, { expires: 10 })
+            Cookies.set('email', `${document.getElementById("email").value}`, { expires: 10 })
+        }
+
+        function showCookies() {
+            let x = document.cookie;
+            const itemsCookies = document.querySelector(".cookies");
+            let cookie = document.createElement("p");
+            cookie.innerHTML = `Email: ${Cookies.get("email")} - Firstname: ${Cookies.get("firstname")}`;
+            itemsCookies.append(cookie);
+        }
+
+        function showForm() {
+            document.querySelector("div").style.display = "block";
+        }
+        
+        function hideForm() {
+            document.querySelector("div").style.display = "none";
+        }
+
+        function deleteCookiesAndShowForm() {
+            Cookies.remove('firstname');
+            Cookies.remove('email');
+            showForm();
+        }
+
+        function showWelcomeMessageOrForm() {
+            document.getElementById("login").addEventListener("click", () => {
+                const welcome = document.createElement("h1");
+                const link = document.createElement("a");
+                link.setAttribute("href", deleteCookiesAndShowForm());
+                welcome.innerHTML = `Welcome ${Cookies.get(firstname)} ${link}`;
+            document.querySelector("body").append(welcome);
+      })
+    }
+
+    </script>
+</body>
+
+</html>
